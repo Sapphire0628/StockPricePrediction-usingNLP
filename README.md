@@ -1,7 +1,9 @@
-# Patent-Text-Novelty-and-Firm-Market-Value
+# Innovation Novelty and Firm Performance ---- Textual Measures
 
-## Introduction
+## Abstract:
 
-Novelty detection is classifying validation data, which differs from the data available during training. This can be seen as a "one-class classification", where a model is established to describe "normal" training data (Pimentel Marco et al., 2014). It is an important ability of a signal recognition scheme.
+The purpose of this study is to investigate the correlation between the originality of patent text and firm value. Technological innovation is a key factor for economic development, and this study evaluates and compares three different methods for quantifying the originality of patent texts, specifically TFIDF-based Maximum Similarity, BERT-based Maximum Similarity, and Variational Autoencoder. The results show that the BERT-based model outperforms the other two methods in detecting the uniqueness of the patent text. Furthermore, this study establishes a positive link between BERT-based text novelty and firm value using ordinary least squares regression analysis of biotech start-ups. This study highlights the importance of detecting novel concepts to improve the efficiency and performance of identifying the impact of novelty in patent texts on firm value.
 
-In this paper, we want to study the influences of the textual novelty of the patent on the stock value of the firm without using relevant scientific or expert evaluations as quality indicators. We will measure and evaluate existing novelty detection methods, then apply the best performing method to our patent data to find the relationship between patent novelty and firm value.
+
+## Keywords:
+Patent innovation, Textual novelty, Maximum Similarity, Variational Autoencoder
