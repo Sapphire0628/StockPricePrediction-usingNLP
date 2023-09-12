@@ -1,9 +1,14 @@
-# Innovation Novelty and Firm Performance ---- Textual Measures
+# Innovation Novelty and Firm Value: Deep Learning-based Text Understanding
 
 ## Abstract:
 
-The purpose of this study is to investigate the correlation between the originality of patent text and firm value. Technological innovation is a key factor for economic development, and this study evaluates and compares three different methods for quantifying the originality of patent texts, specifically TFIDF-based Maximum Similarity, BERT-based Maximum Similarity, and Variational Autoencoder. The results show that the BERT-based model outperforms the other two methods in detecting the uniqueness of the patent text. Furthermore, this study establishes a positive link between BERT-based text novelty and firm value using ordinary least squares regression analysis of biotech start-ups. This study highlights the importance of detecting novel concepts to improve the efficiency and performance of identifying the impact of novelty in patent texts on firm value.
+Innovation is widely acknowledged as a key driver of firm performance, with patents serving as unique indicators of a company’s technological advancements. This study aims to investigate the impact of textual novelty within patents on firm performance, focusing specifically on biotechnology startups listed on the Nasdaq. Utilizing deep learning-based approaches, we construct measures for semantic originality in patent texts. Through panel vector autoregressive (VAR) analysis, our empirical findings demonstrate a positive correlation between textual novelty and abnormal stock returns. Further, impulse response function analysis indicates that the impact of textual novelty peaks approximately one week after patent issuance and gradually diminishes within a month. These insights offer valuable contributions to both the theoretical understanding and practical application of innovation management and strategic planning.
 
+## Authorship:
+Chan, Yuk Yee; Hu, Wei; Huang, Jianming; Zhou, Wanyue; Li, Xin
 
 ## Keywords:
-Patent innovation, Textual novelty, Maximum Similarity, Variational Autoencoder
+Innovation, patent, text analysis, textual novelty, stock market, deep learning
+
+## Overview of the research
+see documentation [here](myLib/README.md)
