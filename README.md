@@ -11,4 +11,4 @@ Chan, Yuk Yee; Hu, Wei; Huang, Jianming; Zhou, Wanyue; Li, Xin
 Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
 ## Overview of the research
-see documentation [here](myLib/PPT.pdf)
+see documentation [here](PPT.pdf)
