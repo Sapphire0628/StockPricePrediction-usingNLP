@@ -12,3 +12,6 @@ Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
 ## Overview of the research
 see documentation [here](./PPT.pdf)
+
+## Research paper
+see documentation [here](./Report.pdf)
