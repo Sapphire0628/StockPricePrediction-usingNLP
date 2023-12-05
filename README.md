@@ -17,7 +17,7 @@ The textual novelty detection problem can be framed as follows: Given a new docu
 
 ### 1. TFIDF-based Maximum Similarity Method
 
-![image](./Figure/TFIDF.png) 
+![image](./Figure/TDIDF.png) 
 
 We define similarity as the cosine similarity built upon the TF-IDF vector representation of documents. After transforming each document into a vector of TF-IDF values, the cosine similarity of any pair of vectors is obtained by taking their dot product and dividing it by the product of their norm.  
 
