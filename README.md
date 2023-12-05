@@ -52,7 +52,7 @@ When looking at the different methods used, the TFIDF-based method showed that m
 
 <img src='./Figure/BERT_dist.png' width='600'>
 
-<img src='./Figure/VAE_dist' width='600'>
+<img src='./Figure/VAE_dist.png' width='600'>
 
 
 BERT-based and VAE methods showed normal distribution for both normality and novelty classes. However, the VAE method had a more centralized normality class and the BERT-based method had a more centralized novelty class. This suggests that the BERT-based method may be more sensitive in identifying unique features in novel documents, while the VAE method may be better at distinguishing between normal and novel classes.
