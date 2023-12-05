@@ -10,7 +10,7 @@ Chan, Yuk Yee; Hu, Wei; Huang, Jianming; Zhou, Wanyue; Li, Xin
 ## Keywords:
 Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
-## Textual Novelty Measure Development
+## Textual Novelty Measure Development:
 
 The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
 
@@ -36,7 +36,7 @@ Autoencoders use the same data for input and output layers to learn dataset repr
 
 To obtain novelty scores, we utilize the Variational Autoencoder (VAE). VAE is an autoencoder with a regularized latent distribution. During training, it samples from a normal distribution to ensure a well-characterized latent space, leading to improved results.
 
-### Architecture of Variational Autoencoder model
+#### Architecture of Variational Autoencoder model
 
 ![image](./Figure/VAE_model2.png) 
 
@@ -57,6 +57,8 @@ When looking at the different methods used, the TFIDF-based method showed that m
 ![image](./Figure/VAE_dist.png) 
 
 BERT-based and VAE methods showed normal distribution for both normality and novelty classes. However, the VAE method had a more centralized normality class and the BERT-based method had a more centralized novelty class. This suggests that the BERT-based method may be more sensitive in identifying unique features in novel documents, while the VAE method may be better at distinguishing between normal and novel classes.
+
+### Measure Performance Comparison
 
 ![image](./Figure/Performance_comparison.png) 
 
