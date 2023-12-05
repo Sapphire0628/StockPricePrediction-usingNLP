@@ -17,13 +17,28 @@ The textual novelty detection problem can be framed as follows: Given a new docu
 
 ### 1. TFIDF-based Maximum Similarity Method
 
-![image]("./Figure/BERT.png") 
+![image](./Figure/TFIDF.png) 
 
 We define similarity as the cosine similarity built upon the TF-IDF vector representation of documents. After transforming each document into a vector of TF-IDF values, the cosine similarity of any pair of vectors is obtained by taking their dot product and dividing it by the product of their norm.  
 
 ### 2. Bert-based Maximum Similarity Method
 
+![image](./Figure/BERT.png) 
+
+We use SBERT, a modification of BERT, to generate meaningful sentence embeddings. These embeddings are compared using cosine similarity. We chose the "sentence-transformers/all-MiniLM-L6-v2" model, which maps sentences and paragraphs to a fixed 384-dimensional vector space. This vector space can be used for tasks like semantic search. Then, we calculate similarity using cosine similarity. In addition, we normalize the novelty scores without changing their magnitude for better representation of the data.
+
+For fine-tuning the BERT-based word vector model, we split the patent data into sentence-level training data. We set the number of warm-up steps for the SBERT model to 500, the training batch sample size to 32, the epochs step size to 10, and leave the rest of the parameters as default settings. After training the model, we obtain a word vector representation model.
+
 ### 3. Variational Autoencoding
+
+![image](./Figure/VAE.png) 
+
+Autoencoders use the same data for input and output layers to learn dataset representations, often for dimensionality reduction and eliminating unwanted signals. Normal inputs can pass through layers with minimal loss, but novel inputs deviating from hidden patterns will experience greater data loss.
+
+To obtain novelty scores, we utilize the Variational Autoencoder (VAE). VAE is an autoencoder with a regularized latent distribution. During training, it samples from a normal distribution to ensure a well-characterized latent space, leading to improved results.
+
+### Architecture of Variational Autoencoder model
+
 
 ## Evaluation Framework
 See documentation [here](./PPT.pdf)
