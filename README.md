@@ -12,55 +12,54 @@ Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
 ## Textual Novelty Measure Development:
 
-The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
+> The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
 
 ### 1. TFIDF-based Maximum Similarity Method (TFIDF-based)
 
-![image](./Figure/TDITF.png) 
+<img src='./Figure/TDITF.png' width='600'>
 
 We define similarity as the cosine similarity built upon the TF-IDF vector representation of documents. After transforming each document into a vector of TF-IDF values, the cosine similarity of any pair of vectors is obtained by taking their dot product and dividing it by the product of their norm.  
 
 ### 2. Bert-based Maximum Similarity Method (BERT-based)
 
-![image](./Figure/BERT.png) 
+<img src='./Figure/BERT.png' width='600'>
 
 We use SBERT, a modification of BERT, to generate meaningful sentence embeddings. These embeddings are compared using cosine similarity. We chose the "sentence-transformers/all-MiniLM-L6-v2" model, which maps sentences and paragraphs to a fixed 384-dimensional vector space. This vector space can be used for tasks like semantic search. Then, we calculate similarity using cosine similarity. In addition, we normalize the novelty scores without changing their magnitude for better representation of the data.
 
-For fine-tuning the BERT-based word vector model, we split the patent data into sentence-level training data. We set the number of warm-up steps for the SBERT model to 500, the training batch sample size to 32, the epochs step size to 10, and leave the rest of the parameters as default settings. After training the model, we obtain a word vector representation model.
+> For fine-tuning the BERT-based word vector model, we split the patent data into sentence-level training data. We set the number of warm-up steps for the SBERT model to 500, the training batch sample size to 32, the epochs step size to 10, and leave the rest of the parameters as default settings. After training the model, we obtain a word vector representation model.
 
 ### 3. Variational AutoEncoding (VAE)
 
-![image](./Figure/VAE.png) 
+<img src='./Figure/VAE.png' width='600'>
 
-Autoencoders use the same data for input and output layers to learn dataset representations, often for dimensionality reduction and eliminating unwanted signals. Normal inputs can pass through layers with minimal loss, but novel inputs deviating from hidden patterns will experience greater data loss.
-
-To obtain novelty scores, we utilize the Variational Autoencoder (VAE). VAE is an autoencoder with a regularized latent distribution. During training, it samples from a normal distribution to ensure a well-characterized latent space, leading to improved results.
+Autoencoders use the same data for input and output layers to learn dataset representations, often for dimensionality reduction and eliminating unwanted signals. Normal inputs can pass through layers with minimal loss, but novel inputs deviating from hidden patterns will experience greater data loss. To obtain novelty scores, we utilize the Variational Autoencoder (VAE). VAE is an autoencoder with a regularized latent distribution. During training, it samples from a normal distribution to ensure a well-characterized latent space, leading to improved results.
 
 #### Architecture of Variational Autoencoder model
 
-![image](./Figure/VAE_model2.png) 
+<img src='./Figure/VAE_model2.png' width='600'>
 
 ## Evaluation Framework
 
-We set up a baseline document set with normal (non-novel) documents and two comparison groups, one with only normal documents and one with both normal and novel documents. The former is simulating the situation of the occurrence of normal documents, and the latter is simulating the situation of the occurrence of novel documents; see Figure as follows:
+> We set up a baseline document set with normal (non-novel) documents and two comparison groups, one with only normal documents and one with both normal and novel documents. The former is simulating the situation of the occurrence of normal documents, and the latter is simulating the situation of the occurrence of novel documents; see Figure as follows:
 
-![image](./Figure/Evaluation_framework.png) 
+<img src='./Figure/Evaluation_framework.png' width='600'>
 
 ## Performance Comparison
 
-![image](./Figure/TFIDF_dist.png) 
+<img src='./Figure/TFIDF_dist.png' width='600'>
 
 When looking at the different methods used, the TFIDF-based method showed that most novel classes seem to have novelty scores between 0.8 and 1, whereas normal classes seem to have an irregular distribution. 
 
-![image](./Figure/BERT_dist.png) 
+<img src='./Figure/BERT_dist.png' width='600'>
 
-![image](./Figure/VAE_dist.png) 
+<img src='./Figure/VAE_dist' width='600'>
+
 
 BERT-based and VAE methods showed normal distribution for both normality and novelty classes. However, the VAE method had a more centralized normality class and the BERT-based method had a more centralized novelty class. This suggests that the BERT-based method may be more sensitive in identifying unique features in novel documents, while the VAE method may be better at distinguishing between normal and novel classes.
 
 ### Measure Performance Comparison
 
-![image](./Figure/Performance_comparison.png) 
+<img src='./Figure/Performance_comparison.png' width='600'>
 
 The Bert-based Maximum Similarity method has the highest correlation coefficient of 0.808 among the three methods, indicating a strong positive correlation between the predicted novelty scores and the novelty/normal classes. 
 
