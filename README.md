@@ -48,12 +48,17 @@ We set up a baseline document set with normal (non-novel) documents and two comp
 
 ## Evaluation Metrics
 
+![image](./Figure/Preformance_comparison.png) 
 
-Pearson correlation coefficient: To determine the difference between normal and novel documents, we calculate the correlation between the novelty score and the novelty or normal classes.
-Kolmogorov-Smirnov test: It can be used to compare the distributions of two comparison groups to determine if they are significantly different from each other.
-Jaccard coefficient: It measures the similarity or overlap level between two comparison groups.
-Jaccard coefficient (continuous version): The Jaccard coefficient in the continuous version.
-Dice coefficient: It measures the similarity or overlap level between two comparison groups.
+> Pearson correlation coefficient: To determine the difference between normal and novel documents, we calculate the correlation between the novelty score and the novelty or normal classes.
+
+> Kolmogorov-Smirnov test: It can be used to compare the distributions of two comparison groups to determine if they are significantly different from each other.
+
+> Jaccard coefficient: It measures the similarity or overlap level between two comparison groups.
+
+> Jaccard coefficient (continuous version): The Jaccard coefficient in the continuous version.
+
+> Dice coefficient: It measures the similarity or overlap level between two comparison groups.
 
 
 
