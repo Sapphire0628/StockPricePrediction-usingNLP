@@ -12,10 +12,14 @@ Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
 ## Textual Novelty Measure Development
 
-Textual novelty detection problem can framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
+The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
 ## Overview of our Research
 
 ### 1. TFIDF-based Maximum Similarity Method
+
+![image]("./Figure/BERT.png") 
+
+We define similarity as the cosine similarity built upon the TF-IDF vector representation of documents. After transforming each document into a vector of TF-IDF values, the cosine similarity of any pair of vectors is obtained by taking their dot product and dividing it by the product of their norm.  
 
 ### 2. Bert-based Maximum Similarity Method
 
