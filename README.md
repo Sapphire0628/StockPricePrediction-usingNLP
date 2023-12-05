@@ -13,7 +13,6 @@ Innovation, patent, text analysis, textual novelty, stock market, deep learning
 ## Textual Novelty Measure Development
 
 The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
-## Overview of our Research
 
 ### 1. TFIDF-based Maximum Similarity Method
 
@@ -39,8 +38,15 @@ To obtain novelty scores, we utilize the Variational Autoencoder (VAE). VAE is a
 
 ### Architecture of Variational Autoencoder model
 
+![image](./Figure/VAE_model2.png) 
 
 ## Evaluation Framework
+
+We set up a baseline document set with normal (non-novel) documents and two comparison groups, one with only normal documents and one with both normal and novel documents. The former is simulating the situation of the occurrence of normal documents, and the latter is simulating the situation of the occurrence of novel documents; see Figure as follows:
+
+![image](./Figure/Evaluation_framework.png) 
+
+## Overview of our Research
 See documentation [here](./PPT.pdf)
 
 ## Textual Measure Report
