@@ -48,7 +48,7 @@ We set up a baseline document set with normal (non-novel) documents and two comp
 
 ## Performance Comparison
 
-![image](./Figure/TDITF_dist.png) 
+![image](./Figure/TFIDF_dist.png) 
 
 When looking at the different methods used, the TFIDF-based method showed that most novel classes seem to have novelty scores between 0.8 and 1, whereas normal classes seem to have an irregular distribution. 
 
