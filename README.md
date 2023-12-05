@@ -48,7 +48,12 @@ We set up a baseline document set with normal (non-novel) documents and two comp
 
 ## Evaluation Metrics
 
-![image](./Figure/Preformance_comparison.png) 
+![image](./Figure/Performance_comparison.png) 
+
+The Bert-based Maximum Similarity method has the highest correlation coefficient of 0.808 among the three methods, indicating a strong positive correlation between the predicted novelty scores and the novelty/normal classes. 
+
+The KS test of the Bert-based Maximum Similarity method has a value of 0.865, the highest among the three methods. This indicates that the distribution of novelty scores for the novelty/normal classes produced by the Bert-based method is significantly different compared to the others. 
+
 
 > Pearson correlation coefficient: To determine the difference between normal and novel documents, we calculate the correlation between the novelty score and the novelty or normal classes.
 
