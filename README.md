@@ -12,7 +12,7 @@ Chan, Yuk Yee; Hu, Wei; Huang, Jianming; Zhou, Wanyue; Li, Xin
 ## Keywords:
 Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
-## Textual Novelty Measure Development:
+## Textual Innovation Novelty Measurement Development:
 
 > The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
 
