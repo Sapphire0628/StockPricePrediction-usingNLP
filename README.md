@@ -85,7 +85,7 @@ This study uses a panel VAR model to analyze the relationship between a firm's t
 
 <img src='./Figure/IRF.png' width='800'>
 
-To quantify the effect of the change in dependent variables lagged more than one period, impulse response functions (IRFs) are often used to visually interpret the coefficient estimates generated for panel VAR models by simulating the fitted panel VAR model through a Monte Carlo simulation with 1,000 runs. As shown in Figure 2, the IRF results reveal that the effect of the textual patent novelty score on firm value lasts for about one week and gradually decreases to zero as the effect eventually dies out.
+To quantify the effect of the change in dependent variables lagged more than one period, impulse response functions (IRFs) are often used to visually interpret the coefficient estimates generated for panel VAR models by simulating the fitted panel VAR model through a Monte Carlo simulation with 1,000 runs. As shown in Figure, the IRF results reveal that the effect of the textual patent novelty score on firm value lasts for about one week and gradually decreases to zero as the effect eventually dies out.
 
 ### Conclusion
 
