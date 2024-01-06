@@ -16,7 +16,7 @@ Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
 > The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
 
-<img src='./Figure/Novelty Measurement.png' width='600'>
+<img src='./Figure/Novelty Measurement.png' width='800'>
 
 ### 1. TFIDF-based Maximum Similarity Method (TFIDF-based)
 
@@ -83,7 +83,7 @@ The KS test of the Bert-based Maximum Similarity method has a value of 0.865, th
 ### Panel VAR Model
 This study uses a panel VAR model to analyze the relationship between a firm's textual patent novelty and its performance. The findings suggest that innovation novelty has a significant impact on firm value, with investors quickly responding to pioneering patents in the biotechnology sector within a week.
 
-<img src='./Figure/IRF.png' width='600'>
+<img src='./Figure/IRF.png' width='800'>
 
 To quantify the effect of the change in dependent variables lagged more than one period, impulse response functions (IRFs) are often used to visually interpret the coefficient estimates generated for panel VAR models by simulating the fitted panel VAR model through a Monte Carlo simulation with 1,000 runs. As shown in Figure 2, the IRF results reveal that the effect of the textual patent novelty score on firm value lasts for about one week and gradually decreases to zero as the effect eventually dies out.
 
