@@ -18,17 +18,17 @@ Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
 > The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
 
-<img src='./Figure/Novelty Measurement.png' width='800'>
+<img src='./fig/Novelty Measurement.png' width='800'>
 
 ### 1. TFIDF-based Maximum Similarity Method (TFIDF-based)
 
-<img src='./Figure/TDITF.png' width='600'>
+<img src='./fig/TDITF.png' width='600'>
 
 We define similarity as the cosine similarity built upon the TF-IDF vector representation of documents. After transforming each document into a vector of TF-IDF values, the cosine similarity of any pair of vectors is obtained by taking their dot product and dividing it by the product of their norm.  
 
 ### 2. Bert-based Maximum Similarity Method (BERT-based)
 
-<img src='./Figure/BERT.png' width='600'>
+<img src='./fig/BERT.png' width='600'>
 
 We use SBERT, a modification of BERT, to generate meaningful sentence embeddings. These embeddings are compared using cosine similarity. We chose the "sentence-transformers/all-MiniLM-L6-v2" model, which maps sentences and paragraphs to a fixed 384-dimensional vector space. This vector space can be used for tasks like semantic search. Then, we calculate similarity using cosine similarity. In addition, we normalize the novelty scores without changing their magnitude for better representation of the data.
 
@@ -36,36 +36,36 @@ We use SBERT, a modification of BERT, to generate meaningful sentence embeddings
 
 ### 3. Variational AutoEncoding (VAE)
 
-<img src='./Figure/VAE.png' width='600'>
+<img src='./fig/VAE.png' width='600'>
 
 Autoencoders use the same data for input and output layers to learn dataset representations, often for dimensionality reduction and eliminating unwanted signals. Normal inputs can pass through layers with minimal loss, but novel inputs deviating from hidden patterns will experience greater data loss. To obtain novelty scores, we utilize the Variational Autoencoder (VAE). VAE is an autoencoder with a regularized latent distribution. During training, it samples from a normal distribution to ensure a well-characterized latent space, leading to improved results.
 
 #### Architecture of Variational Autoencoder model
 
-<img src='./Figure/VAE_model2.png' width='600'>
+<img src='./fig/VAE_model2.png' width='600'>
 
 ## Evaluation Framework
 
 > We set up a baseline document set with normal (non-novel) documents and two comparison groups, one with only normal documents and one with both normal and novel documents. The former is simulating the situation of the occurrence of normal documents, and the latter is simulating the situation of the occurrence of novel documents; see Figure as follows:
 
-<img src='./Figure/Evaluation_framework.png' width='600'>
+<img src='./fig/Evaluation_framework.png' width='600'>
 
 ## Performance Comparison
 
-<img src='./Figure/TFIDF_dist.png' width='600'>
+<img src='./fig/TFIDF_dist.png' width='600'>
 
 When looking at the different methods used, the TFIDF-based method showed that most novel classes seem to have novelty scores between 0.8 and 1, whereas normal classes seem to have an irregular distribution. 
 
-<img src='./Figure/BERT_dist.png' width='600'>
+<img src='./fig/BERT_dist.png' width='600'>
 
-<img src='./Figure/VAE_dist.png' width='600'>
+<img src='./fig/VAE_dist.png' width='600'>
 
 
 BERT-based and VAE methods showed normal distribution for both normality and novelty classes. However, the VAE method had a more centralized normality class and the BERT-based method had a more centralized novelty class. This suggests that the BERT-based method may be more sensitive in identifying unique features in novel documents, while the VAE method may be better at distinguishing between normal and novel classes.
 
 ### Measure Performance Comparison
 
-<img src='./Figure/Performance_comparison.png' width='600'>
+<img src='./fig/Performance_comparison.png' width='600'>
 
 The Bert-based Maximum Similarity method has the highest correlation coefficient of 0.808 among the three methods, indicating a strong positive correlation between the predicted novelty scores and the novelty/normal classes. 
 
@@ -85,7 +85,7 @@ The KS test of the Bert-based Maximum Similarity method has a value of 0.865, th
 ### Panel VAR Model
 This study uses a panel VAR model to analyze the relationship between a firm's textual patent novelty and its performance. The findings suggest that innovation novelty has a significant impact on firm value, with investors quickly responding to pioneering patents in the biotechnology sector within a week.
 
-<img src='./Figure/IRF.png' width='800'>
+<img src='./fig/IRF.png' width='800'>
 
 To quantify the effect of the change in dependent variables lagged more than one period, impulse response functions (IRFs) are often used to visually interpret the coefficient estimates generated for panel VAR models by simulating the fitted panel VAR model through a Monte Carlo simulation with 1,000 runs. As shown in Figure, the IRF results reveal that the effect of the textual patent novelty score on firm value lasts for about one week and gradually decreases to zero as the effect eventually dies out.
 
