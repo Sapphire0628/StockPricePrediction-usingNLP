@@ -40,7 +40,7 @@ Innovation, patent, text analysis, textual novelty, stock market, deep learning
 conda create -n myenv python=3.9
 conda activate myenv
 conda install -c conda-forge numpy=1.23.0 pandas=1.3.5 matplotlib=3.8.2 tensorflow=2.10.0 torch=1.0.0 sentence-transformers=2.2.2 ipython=8.11.0 scikit-learn
-python3 ./path/main.py
+python ./src/main.py
 ```
 
 ## Textual Innovation Novelty Measurement Development:
