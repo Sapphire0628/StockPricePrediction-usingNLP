@@ -14,6 +14,35 @@ Chan, Yuk Yee; Hu, Wei; Huang, Jianming; Zhou, Wanyue; Li, Xin
 ## Keywords:
 Innovation, patent, text analysis, textual novelty, stock market, deep learning
 
+## Getting Started
+
+### Dependencies
+
+- Python
+  - Python 3.9
+  - numpy 1.23.0
+  - pandas 1.3.5
+  - matplotlib 3.8.2
+  - tensorflow 2.10.0
+  - torch 2.0.0
+  - sentence-transformers 2.2.2
+  - tensorflow
+  - ipython 8.11.0
+  - sklearn
+
+### Setting up the Conda Environment
+
+1. Clone this repository to your local machine.
+2. Open a terminal or command prompt and navigate to the project directory.
+3. Create a new Conda environment using the following command:
+
+```bash
+conda create -n myenv python=3.9
+conda activate myenv
+conda install -c conda-forge numpy=1.23.0 pandas=1.3.5 matplotlib=3.8.2 tensorflow=2.10.0 torch=1.0.0 sentence-transformers=2.2.2 ipython=8.11.0 scikit-learn
+python3 ./path/main.py
+```
+
 ## Textual Innovation Novelty Measurement Development:
 
 > The textual novelty detection problem can be framed as follows: Given a new document p and a set of existing documents D={di}, the textual novelty detection is to define a function TN(p, D) that tells how novel p is given the existence of D. In this project, we develop three methods for textual novelty.
