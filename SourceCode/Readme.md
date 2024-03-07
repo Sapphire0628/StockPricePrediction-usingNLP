@@ -1,4 +1,6 @@
-This repository contains the code for a pipeline that performs patent novelty analysis using different methods and evaluation metrics. The pipeline consists of several modules, each responsible for a specific task. Below is an overview of each module and its purpose.
+# Source Code Introduction
+
+Here contains the code for a pipeline that performs patent novelty analysis using different methods and evaluation metrics. The pipeline consists of several modules, each responsible for a specific task. Below is an overview of each module and its purpose.
 
 Main.py
 This is the main script that orchestrates the entire pipeline. It imports and calls the necessary functions from the other modules to execute the patent novelty analysis workflow.
