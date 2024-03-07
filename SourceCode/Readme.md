@@ -31,7 +31,6 @@ Please note that this module requires the file "Startup_Listed_In_NASDAD_2000-20
 ### PatentNovelty.py
 This module generates the final patent novelty results. It includes functions for processing the "all_file.json" file and producing the novelty scores for each patent. The output of this module represents the novelty of each patent based on the selected method and evaluation metrics.
 
-Please note that this module requires the file "all_file.json" to be present in the same directory.
 
 Feel free to explore the code in this repository and adapt it to your specific needs. If you have any questions or face any issues, please don't hesitate to reach out to the repository owner.
 
